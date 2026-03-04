@@ -1,0 +1,7 @@
+.env
+llm_gateway/.env
+__pycache__/
+*.pyc
+venv/
+.venv/
+.vscode/
