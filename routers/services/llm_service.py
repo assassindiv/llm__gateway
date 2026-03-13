@@ -27,7 +27,6 @@ async def generate_response(messages: list, model: str, provider: str):
 
 
 async def _call_openai_compatible(client, messages: list, model: str):
-    """Groq and OpenAI share the same SDK interface."""
     response = await client.chat.completions.create(
         model=model,
         messages=messages
@@ -41,7 +40,6 @@ async def _call_openai_compatible(client, messages: list, model: str):
     }
 
 async def _call_anthropic(messages: list, model: str):
-    """Anthropic has a different SDK — normalize the response."""
     response = await anthropic_client.messages.create(
         model=model,
         max_tokens=1024,
