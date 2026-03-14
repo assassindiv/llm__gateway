@@ -1,6 +1,6 @@
 import time, requests, redis, hashlib, json
 
-r = redis.Redis(host='localhost', port=6379)
+r = redis.Redis(host="redis", port=6379)
 headers = {"x-api-key": "test-key-123"}
 payload = {
     "model": "llama-3.1-8b-instant",
